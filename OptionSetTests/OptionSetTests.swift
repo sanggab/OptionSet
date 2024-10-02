@@ -9,6 +9,8 @@ import XCTest
 @testable import OptionSet
 
 final class OptionSetTests: XCTestCase {
+    
+    var exerciseOption = ExerciseOptions()
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -25,6 +27,13 @@ final class OptionSetTests: XCTestCase {
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
+    
+    func testOneStep() throws {
+        exerciseOption.unionAll(.soccer)
+        print(exerciseOption.stringValue)
+        print("상갑 logEvent \(#function) exerciseOption: \(exerciseOption)")
+        print("상갑 logEvent \(#function) exerciseOption: \(exerciseOption.stringValue)")
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
@@ -33,4 +42,33 @@ final class OptionSetTests: XCTestCase {
         }
     }
 
+}
+
+private enum ExerciseEnum: String {
+    case soccer = "Soccer"
+}
+
+struct ExerciseOptions: OptionSet {
+    let rawValue: Int
+    
+    static let soccer = ExerciseOptions(rawValue: 1 << 0)
+    
+    static let all: ExerciseOptions = [
+        .soccer
+    ]
+    
+    mutating func unionAll(_ option: ExerciseOptions) {
+        self = self.union(option)
+    }
+}
+
+extension ExerciseOptions {
+    var stringValue: String {
+        switch self {
+        case .soccer:
+            return "Soccer"
+        default:
+            return ""
+        }
+    }
 }
