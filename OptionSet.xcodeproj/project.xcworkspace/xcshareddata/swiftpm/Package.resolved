@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftui-flowlayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sanggab/swiftui-flowLayout.git",
+      "state" : {
+        "revision" : "b0f7b95e0170e1dbb6c3eb4776d71e053d4941e2",
+        "version" : "1.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}

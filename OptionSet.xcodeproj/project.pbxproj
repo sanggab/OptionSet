@@ -14,6 +14,7 @@
 		EF39E58B2CACC53800E7917F /* OptionSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39E58A2CACC53800E7917F /* OptionSetTests.swift */; };
 		EF39E5952CACC53800E7917F /* OptionSetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39E5942CACC53800E7917F /* OptionSetUITests.swift */; };
 		EF39E5972CACC53800E7917F /* OptionSetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF39E5962CACC53800E7917F /* OptionSetUITestsLaunchTests.swift */; };
+		EF39E5A72CACD1CE00E7917F /* GabFlowLayout in Frameworks */ = {isa = PBXBuildFile; productRef = EF39E5A62CACD1CE00E7917F /* GabFlowLayout */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF39E5A72CACD1CE00E7917F /* GabFlowLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = OptionSet;
+			packageProductDependencies = (
+				EF39E5A62CACD1CE00E7917F /* GabFlowLayout */,
+			);
 			productName = OptionSet;
 			productReference = EF39E5762CACC53600E7917F /* OptionSet.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = EF39E56D2CACC53600E7917F;
+			packageReferences = (
+				EF39E5A52CACD1CE00E7917F /* XCRemoteSwiftPackageReference "swiftui-flowLayout" */,
+			);
 			productRefGroup = EF39E5772CACC53600E7917F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -588,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF39E5A52CACD1CE00E7917F /* XCRemoteSwiftPackageReference "swiftui-flowLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanggab/swiftui-flowLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF39E5A62CACD1CE00E7917F /* GabFlowLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF39E5A52CACD1CE00E7917F /* XCRemoteSwiftPackageReference "swiftui-flowLayout" */;
+			productName = GabFlowLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF39E56E2CACC53600E7917F /* Project object */;
 }
