@@ -32,9 +32,7 @@ final class OptionSetTests: XCTestCase {
     }
     
     func testOneStep() throws {
-        xct
-        
-        exerciseOption.formUnion([.soccer, .hockey])
+        exerciseOption.formUnion([.soccer])
         print(exerciseOption.stringValue)
         print("상갑 logEvent \(#function) exerciseOption: \(exerciseOption)")
         print("상갑 logEvent \(#function) exerciseOption: \(exerciseOption.stringValue)")
@@ -169,9 +167,44 @@ extension ExerciseOptions {
         }
     }
     
+    static var debugDescriptions: [(Self, String)] = [
+        (.soccer, "Soccer"),
+        (.baseball, "Baseball"),
+        (.taekwondo, "Taekwondo"),
+        (.karate, "Karate"),
+        (.yoga, "Yoga"),
+        (.kickboxing, "Kickboxing"),
+        (.climbing, "Climbing"),
+        (.running, "Running"),
+        (.golf, "Golf"),
+        (.cycling, "Cycling"),
+        (.ski, "Ski"),
+        (.kayak, "Kayak"),
+        (.tennis, "Tennis"),
+        (.bowling, "Bowling"),
+        (.tableTennis, "Table Tennis"),
+        (.basketball, "Basketball"),
+        (.fencing, "Fencing"),
+        (.football, "Football"),
+        (.jogging, "Jogging"),
+        (.volleyball, "Volleyball"),
+        (.hockey, "Hockey"),
+        (.iceHockey, "Ice Hockey"),
+        (.training, "Training"),
+        (.swimming, "Swimming"),
+        (.crossfit, "Crossfit"),
+        (.meditaton, "Meditaton"),
+        (.sportsDance, "Sports dance"),
+        (.horseRiding, "Horse riding"),
+        (.skating, "Skating"),
+    ]
+    
     var description: [String] {
-        
         return []
+    }
+    
+    var testStrs: String {
+        return ""
     }
 }
 
