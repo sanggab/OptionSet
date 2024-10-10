@@ -7,8 +7,11 @@
 
 import XCTest
 @testable import OptionSet
+import Testing
 
 final class OptionSetTests: XCTestCase {
+    
+    var string: String!
     
     var exerciseOption = ExerciseOptions()
 
@@ -29,6 +32,8 @@ final class OptionSetTests: XCTestCase {
     }
     
     func testOneStep() throws {
+        xct
+        
         exerciseOption.formUnion([.soccer, .hockey])
         print(exerciseOption.stringValue)
         print("상갑 logEvent \(#function) exerciseOption: \(exerciseOption)")
@@ -42,7 +47,11 @@ final class OptionSetTests: XCTestCase {
         }
     }
 
-    
+    @Test("hi")
+    func rating() throws {
+        
+    }
+ 
     override func tearDown() {
         exerciseOption.clearAll()
     }
